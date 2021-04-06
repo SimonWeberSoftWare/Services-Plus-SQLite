@@ -10,7 +10,7 @@ using WpfNetCoreMvvm.Services;
 
 namespace WpfNetCoreMvvm.ViewModels
 {
-    public class MainViewModel : ViewModelBase
+    public class MainViewModel : ObservableObject
     {
         private string input;
         public string Input
@@ -45,6 +45,7 @@ namespace WpfNetCoreMvvm.ViewModels
             return Task.CompletedTask;
         }
 
+        
 
     }
 }

@@ -14,12 +14,16 @@
     mc:Ignorable="d">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Input:" />
-            <Label Content="{Binding CurDate}" VerticalAlignment="Bottom"/>
-            <Button Command="{Binding ExecuteCommand}" Content="Execute" />
-            
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+      
+            <Label Content="{Binding CurDate}" VerticalAlignment="Bottom" Grid.Row="0"/>
+            <Label Content="{Binding CurDate}" VerticalAlignment="Bottom" Grid.Row="1"/>
+            <Button Command="{Binding ExecuteCommand}" Content="Execute" Grid.Row="2" Width="100" Height="50" />            
+  
     
     </Grid>
 </Window>
