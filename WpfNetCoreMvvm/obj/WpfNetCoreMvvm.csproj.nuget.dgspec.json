@@ -44,6 +44,14 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.Toolkit": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "Microsoft.Toolkit.Mvvm": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
             "MvvmLightLibsStd10": {
               "target": "Package",
               "version": "[5.4.1.1, )"

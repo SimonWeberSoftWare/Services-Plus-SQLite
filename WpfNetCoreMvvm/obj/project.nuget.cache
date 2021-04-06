@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "G4x9M81SVBLAV7rjVpX3ut5hB4ppqF/+cOi1t2R0tw0xsqf3V2pzfUvQv94QeGxvh2CJ5dQGKX9znqEbC2nqYQ==",
+  "dgSpecHash": "S6zWa6erV5nTpQgrwgQv6vyl6Ru2jSE5IHTakxB4rdWFYWKAOUmt/Z8sD18b6TZZLalB6qQtYPWyYIpOKBguOg==",
   "success": true,
   "projectFilePath": "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj",
   "expectedPackageFiles": [
@@ -30,9 +30,13 @@
     "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.0\\microsoft.extensions.options.configurationextensions.3.1.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.toolkit\\7.0.1\\microsoft.toolkit.7.0.1.nupkg.sha512",
+    "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.0.1\\microsoft.toolkit.mvvm.7.0.1.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\mvvmlightlibsstd10\\5.4.1.1\\mvvmlightlibsstd10.5.4.1.1.nupkg.sha512",
+    "C:\\Users\\simon.weber\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
+    "C:\\Users\\simon.weber\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\simon.weber\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],

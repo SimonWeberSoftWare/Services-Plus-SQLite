@@ -48,3 +48,7 @@ C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\obj\Debug\netcoreap
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\WpfNetCoreMvvm.dll
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\WpfNetCoreMvvm.pdb
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\WpfNetCoreMvvm.genruntimeconfig.cache
+C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\Microsoft.Toolkit.dll
+C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\Microsoft.Toolkit.Mvvm.dll
+C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
