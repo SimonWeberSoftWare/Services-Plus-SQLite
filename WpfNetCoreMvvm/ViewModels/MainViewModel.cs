@@ -48,6 +48,21 @@ namespace WpfNetCoreMvvm.ViewModels
                 reader.Close();
             }
 
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\Management.db;"))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand("Select * from Users", conn);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                    //artistlist.Add(reader["Name"].ToString());
+
+                reader.Close();
+            }
+
+        
+
         }
 
         public List<string> artistlist { get; set; } = new List<string>();
