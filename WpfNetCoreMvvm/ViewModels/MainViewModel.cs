@@ -34,7 +34,7 @@ namespace WpfNetCoreMvvm.ViewModels
             this.writeSomething = writeSomething;
             this.getArtist = getArtist;
             ExecuteCommand = new RelayCommand(async () => await ExecuteAsync());
-
+            /*
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\chinook\chinook.db;"))
             {
                 conn.Open();
@@ -46,9 +46,9 @@ namespace WpfNetCoreMvvm.ViewModels
                     artistlist.Add(reader["Name"].ToString());
 
                 reader.Close();
-            }
+            }*/
 
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\Management.db;"))
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
             {
                 conn.Open();
 

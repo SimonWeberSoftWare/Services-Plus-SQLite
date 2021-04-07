@@ -1,19 +1,19 @@
 ﻿WpfNetCoreMvvm
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\
+C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Release\netcoreapp3.1\
 WpfNetCoreMvvm
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\App.xaml
 1-1644662438
 11413424753
-161872737139
-239-1058416800
+14-1163486702
+192-1533232326
 Views\MainWindow.xaml;
 
 True

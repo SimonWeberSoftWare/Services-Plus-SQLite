@@ -14,7 +14,7 @@ namespace WpfNetCoreMvvm.Services
 
     public void getAllUsers()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\Management.db;"))
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
             {
                 conn.Open();
 
@@ -28,7 +28,7 @@ namespace WpfNetCoreMvvm.Services
                 {
                     curUName = reader["uName"].ToString();
                     curUID = int.Parse(reader["uID"].ToString());
-                    UserList.Add(new User() { UID = curUID, UName = curUName });
+                  //  UserList.Add(new User() { UID = curUID, UName = curUName });
                 }
                 
 
@@ -38,7 +38,7 @@ namespace WpfNetCoreMvvm.Services
 
       public  int getIDByName(string name)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\Management.db;"))
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
             {
                 conn.Open();
 

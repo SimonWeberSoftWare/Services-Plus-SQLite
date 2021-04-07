@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj": {}
+    "C:\\Users\\Simon Weber Work\\Documents\\GitHub\\Services-Plus-SQLite\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj": {}
   },
   "projects": {
-    "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj": {
+    "C:\\Users\\Simon Weber Work\\Documents\\GitHub\\Services-Plus-SQLite\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj",
+        "projectUniqueName": "C:\\Users\\Simon Weber Work\\Documents\\GitHub\\Services-Plus-SQLite\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj",
         "projectName": "WpfNetCoreMvvm",
-        "projectPath": "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj",
-        "packagesPath": "C:\\Users\\simon.weber\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\simon.weber\\Downloads\\WpfNetCoreMvvm\\WpfNetCoreMvvm\\obj\\",
+        "projectPath": "C:\\Users\\Simon Weber Work\\Documents\\GitHub\\Services-Plus-SQLite\\WpfNetCoreMvvm\\WpfNetCoreMvvm.csproj",
+        "packagesPath": "C:\\Users\\Simon Weber Work\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Simon Weber Work\\Documents\\GitHub\\Services-Plus-SQLite\\WpfNetCoreMvvm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\simon.weber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Simon Weber Work\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +95,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
