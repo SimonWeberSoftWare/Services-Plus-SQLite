@@ -42,6 +42,7 @@ namespace WpfNetCoreMvvm
             services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
             services.AddScoped<ISampleService, SampleService>();
             services.AddScoped<IWriteSomething, WriteSomething>();
+            services.AddScoped<IGetArtist, GetArtist>();
 
             // Register all ViewModels.
             services.AddSingleton<MainViewModel>();
