@@ -19,8 +19,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-      
-            <Label Content="{Binding ArtistId}" VerticalAlignment="Bottom" Grid.Row="0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+        <Label Content="{Binding ArtistId}" VerticalAlignment="Bottom" Grid.Row="0"/>
         <Label Content="{Binding Artist}" VerticalAlignment="Bottom" Grid.Row="1"/>
         <Button Command="{Binding ExecuteCommand}" Content="Execute" Grid.Row="2" Width="100" Height="50" />            
   

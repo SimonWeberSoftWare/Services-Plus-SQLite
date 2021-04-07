@@ -54,13 +54,15 @@ namespace WpfNetCoreMvvm.ViewModels
 
                 SQLiteCommand command = new SQLiteCommand("Select * from Users", conn);
                 SQLiteDataReader reader = command.ExecuteReader();
+                
 
                 while (reader.Read())
-                    //artistlist.Add(reader["Name"].ToString());
+                    Debug.WriteLine(reader["uName"].ToString());
 
                 reader.Close();
             }
 
+            
         
 
         }
