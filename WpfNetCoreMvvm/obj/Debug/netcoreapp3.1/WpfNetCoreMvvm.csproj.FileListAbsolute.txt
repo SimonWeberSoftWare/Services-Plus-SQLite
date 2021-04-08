@@ -97,7 +97,6 @@ C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreap
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\WpfNetCoreMvvm.csprojAssemblyReference.cache
 C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\Views\MainWindow.g.cs
 C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\WpfNetCoreMvvm_Content.g.cs

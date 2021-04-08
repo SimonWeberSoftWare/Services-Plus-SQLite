@@ -1,0 +1,1 @@
+C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\obj\Debug\netcoreapp3.1\SQL-Plus-Services.csprojAssemblyReference.cache

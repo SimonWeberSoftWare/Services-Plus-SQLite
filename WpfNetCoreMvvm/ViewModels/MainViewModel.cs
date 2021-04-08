@@ -26,13 +26,13 @@ namespace WpfNetCoreMvvm.ViewModels
 
             this.users = users;
             this.groupsService = groupsService;
-            //groupsService.createGroup(8, "Defenders");
-            //users.createUser(11, "Dwight");
-            //users.deleteUser(11);
-            users.updateUser(1, "XXX");
+           
+            users.createUser(11, "Dwight");     //Create
+            users.deleteUser(11);               //Delete
+            users.updateUser(1, "XXX");         //Update
 
-            //zeigt bei Start alle User an
-            UserList = users.getAllUsers();
+            
+            UserList = users.getAllUsers();     //Read
 
             //zeigt bei Start alle Gruppen des Users mit der ID 1 an
             groupIDList = users.getAllGroupIDByUser(1);                         //Liste mit allen GroupIDs, in denen User ist; Service Users greift auf UsersGroupsTabelle zu
