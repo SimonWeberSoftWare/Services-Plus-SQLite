@@ -1,7 +1,0 @@
-﻿namespace WpfNetCoreMvvm.Services
-{
-    public interface IGetArtist     //gbit vor was zu implementieren ist, das dann in anderen TEchnologien anders umgesetzt werden muss
-    {
-        int GetArtistID(string artist);
-    }
-}

@@ -15,94 +15,48 @@ namespace WpfNetCoreMvvm.ViewModels
 {
     public class MainViewModel : Microsoft.Toolkit.Mvvm.ComponentModel.ObservableObject, INotifyPropertyChanged
     {
-       
+        private readonly IUsers users;
 
-        private readonly ISampleService sampleServiceTest;
-        private readonly AppSettings settings;
-        private readonly IGetArtist getArtist;
+      
+        public RelayCommand<string> GetUserName { get; } //dieses Projekt ist in Version 8.0 geschrieben, deshalb RelayCommands auf diese Weise schreiben
 
-        private readonly IWriteSomething writeSomething;
+        public MainViewModel(IOptions<AppSettings> options, IUsers users)
+        {        
+            GetUserName = new RelayCommand<string>(GetUserNameCmd);
 
-        public RelayCommand ExecuteCommand { get; }
+            this.users = users;
 
-        public MainViewModel(ISampleService sampleService,
-            IOptions<AppSettings> options, IWriteSomething writeSomething, IGetArtist getArtist)
-        {
-            this.sampleServiceTest = sampleService;
-            settings = options.Value;
-
-            this.writeSomething = writeSomething;
-            this.getArtist = getArtist;
-            ExecuteCommand = new RelayCommand(async () => await ExecuteAsync());
-            /*
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\chinook\chinook.db;"))
-            {
-                conn.Open();
-
-                SQLiteCommand command = new SQLiteCommand("Select * from artists", conn);
-                SQLiteDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                    artistlist.Add(reader["Name"].ToString());
-
-                reader.Close();
-            }*/
-
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
-            {
-                conn.Open();
-
-                SQLiteCommand command = new SQLiteCommand("Select * from Users", conn);
-                SQLiteDataReader reader = command.ExecuteReader();
-                
-
-                while (reader.Read())
-                    Debug.WriteLine(reader["uName"].ToString());
-
-                reader.Close();
-            }
-
-            
+            UserList = users.getAllUsers();    
         
 
         }
 
-        public List<string> artistlist { get; set; } = new List<string>();
-
-        private Task ExecuteAsync()
+        private void GetUserNameCmd(string id)
         {
-            Debug.WriteLine(sampleServiceTest.GetCurrentDate());
-            Debug.WriteLine(writeSomething.WriteSomethingAsString("as string"));
-            CurTime = sampleServiceTest.GetCurrentDate();
-            OnPropertyChanged(nameof(CurTime));
-
-            Artist = artistlist[2];
-            OnPropertyChanged(nameof(Artist));
-
-           ArtistId = getArtist.GetArtistID("Kiss");
-            OnPropertyChanged(nameof(ArtistId));
-            return Task.CompletedTask;
+          UserName =  users.getNameByID(int.Parse(id));
+            OnPropertyChanged(nameof(UserName));
         }
 
-        private string _curTime ;
-        public string CurTime
+        public List<Models.User> UserList { get; set; } = new List<Models.User>();
+
+    
+
+        private string _userName;
+        public string UserName
         {
-            get => _curTime;
-            set => SetProperty(ref _curTime, value);
+            get => _userName;
+            set => SetProperty(ref _userName, value);
         }
 
-        private string _artist;
-        public string Artist
+        private int _userID;
+        public int UserId
         {
-            get => _artist;
-            set => SetProperty(ref _artist, value);
+            get => _userID;
+            set => SetProperty(ref _userID, value);
         }
 
-        private int _artistId=0;
-        public int ArtistId
-        {
-            get => _artistId;
-            set => SetProperty(ref _artistId, value);
-        }
+      
+
+
     }
 }

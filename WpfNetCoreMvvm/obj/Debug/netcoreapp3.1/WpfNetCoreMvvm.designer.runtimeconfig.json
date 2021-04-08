@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\simon.weber\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\simon.weber\\.nuget\\packages"
+      "C:\\Users\\Simon Weber Work\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Simon Weber Work\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

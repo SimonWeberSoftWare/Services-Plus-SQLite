@@ -9,11 +9,15 @@ namespace WpfNetCoreMvvm.Services
 {
     public class Users : IUsers
     {
-    
-        public Users UserList { get; set; } = new Users();
+        //nur der Service Users hat Zugriff auf die Tabelle Users, 
 
-    public void getAllUsers()
+        //  public  Users UserList { get; set; } = new Users();
+        public List<User> UserList = new List<User>();
+
+        public List<User> getAllUsers()
         {
+            //speichert alle Einträge der Tabelle Users im Model Users(schlechte Namenswahl)
+
             using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
             {
                 conn.Open();
@@ -28,60 +32,47 @@ namespace WpfNetCoreMvvm.Services
                 {
                     curUName = reader["uName"].ToString();
                     curUID = int.Parse(reader["uID"].ToString());
-                  //  UserList.Add(new User() { UID = curUID, UName = curUName });
+                    UserList.Add(new User() { UID = curUID, UName = curUName });
                 }
                 
 
                 reader.Close();
             }
+            return UserList;
         }
 
       public  int getIDByName(string name)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
+             List<User> UserList = new List<User>();
+            UserList = getAllUsers();
+
+        int returnID = -1;
+            UserList.ForEach(delegate (User Element)
             {
-                conn.Open();
-
-                SQLiteCommand command = new SQLiteCommand("Select * from Users", conn);
-                SQLiteDataReader reader = command.ExecuteReader();
-
-
-                while (reader.Read())
+                if(Element.UName == "name")
                 {
-                    if(reader["uName"].ToString() == name)
-                    {
-                        return int.Parse(reader["uID"].ToString());
-                    }
+                    returnID = Element.UID;
                 }
-                    //Debug.WriteLine(reader["uName"].ToString());
-
-                reader.Close();
-            }
-            return -1;
+            });
+            return returnID;
+            //returnt ID, falls Name nicht gefunden -1
         }
 
       public  string getNameByID(int id)
         {
-            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\simon.weber\Downloads\WpfNetCoreMvvm\WpfNetCoreMvvm\Management.db;"))
+            List<User> UserList = new List<User>();
+            UserList = getAllUsers();
+
+            string returnName = "-1";
+            UserList.ForEach(delegate (User Element)
             {
-                conn.Open();
-
-                SQLiteCommand command = new SQLiteCommand("Select * from Users", conn);
-                SQLiteDataReader reader = command.ExecuteReader();
-
-
-                while (reader.Read())
+                if (Element.UID == id)
                 {
-                    if (reader["uID"].ToString() == id.ToString())
-                    {
-                        return reader["uName"].ToString();
-                    }
+                    returnName = Element.UName;
                 }
-             
-
-                reader.Close();
-            }
-            return "nothere";
+            });
+            return returnName;
+            //returnt Name, falls Name nicht gefunden -1
         }
     }
 }
