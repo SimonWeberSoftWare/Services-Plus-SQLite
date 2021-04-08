@@ -41,7 +41,7 @@ namespace WpfNetCoreMvvm
         {
             services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
             services.AddScoped<ISampleService, SampleService>();
-            
+            services.AddScoped<IGroupsService, GroupsService>();
 
             services.AddScoped<IUsers, Services.Users>();
 

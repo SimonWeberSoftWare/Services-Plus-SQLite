@@ -34,22 +34,22 @@ namespace WpfNetCoreMvvm.Services
                     curUID = int.Parse(reader["uID"].ToString());
                     UserList.Add(new User() { UID = curUID, UName = curUName });
                 }
-                
+
 
                 reader.Close();
             }
             return UserList;
         }
 
-      public  int getIDByName(string name)
+        public int getIDByName(string name)
         {
-             List<User> UserList = new List<User>();
+            List<User> UserList = new List<User>();
             UserList = getAllUsers();
 
-        int returnID = -1;
+            int returnID = -1;
             UserList.ForEach(delegate (User Element)
             {
-                if(Element.UName == "name")
+                if (Element.UName == "name")
                 {
                     returnID = Element.UID;
                 }
@@ -58,7 +58,7 @@ namespace WpfNetCoreMvvm.Services
             //returnt ID, falls Name nicht gefunden -1
         }
 
-      public  string getNameByID(int id)
+        public string getNameByID(int id)
         {
             List<User> UserList = new List<User>();
             UserList = getAllUsers();
@@ -73,6 +73,66 @@ namespace WpfNetCoreMvvm.Services
             });
             return returnName;
             //returnt Name, falls Name nicht gefunden -1
+        }
+
+        public List<int> getAllGroupIDByUser(int id)
+        {
+            List<int> GroupIDList = new List<int>();
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand("Select * from UsersGroups", conn);
+                SQLiteDataReader reader = command.ExecuteReader();
+
+                int curGID;
+                //int curUID;
+
+                while (reader.Read())
+                {
+                    curGID = int.Parse(reader["gID"].ToString());
+                    if (int.Parse(reader["uID"].ToString()) == id)  //die GruppenIDs aller Einträge des übergebenen Nutzers werden gespeichert
+                    {
+                        GroupIDList.Add(curGID);
+                    }
+
+                }
+
+
+                reader.Close();
+            }
+            return GroupIDList;
+        }
+
+        public void createUser(int id, string name)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
+            {
+                conn.Open();
+
+                SQLiteCommand command = new SQLiteCommand($"INSERT INTO Users(uID, uName) VALUES ({id},'{name}')", conn);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void deleteUser(int id)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand($"DELETE FROM Users WHERE uID ='{id}'", conn);
+                command.ExecuteNonQuery();
+            }
+        }
+        
+        public void updateUser(int id, string newName)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(@"Data Source=C:\Users\Simon Weber Work\Documents\GitHub\Services-Plus-SQLite\WpfNetCoreMvvm\Management.db;"))
+            {
+                conn.Open();
+                SQLiteCommand command = new SQLiteCommand($"UPDATE Users SET uName = '{newName}' WHERE uID = {id}", conn);
+                command.ExecuteNonQuery();
+            }
         }
     }
 }

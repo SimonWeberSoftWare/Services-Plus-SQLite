@@ -15,8 +15,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,13 +25,39 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <DataGrid ItemsSource="{Binding UserList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" 
-                  AutoGenerateColumns="True" 
+        <Label Content="All users of group #2" Grid.Row="0" Grid.Column="0" FontSize="15"/>
+        <DataGrid ItemsSource="{Binding userNameList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" 
+                  AutoGenerateColumns="False" 
                   SelectionMode="Single"
-                  Grid.Column="1"/>
-        <Label Content="{Binding UserName}" VerticalAlignment="Bottom" Grid.Row="0"/>
-        <Label Content="" VerticalAlignment="Bottom" Grid.Row="1"/>
-        <Button Command="{Binding GetUserName}" CommandParameter="1" Content="GetUserName" Grid.Row="2" Width="100" Height="50" />            
+                  Grid.Column="0"
+                  Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label Content="All Users from table Users" Grid.Row="0" Grid.Column="1" FontSize="15"/>
+        <DataGrid ItemsSource="{Binding UserList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" 
+                  AutoGenerateColumns="False" 
+                  SelectionMode="Single"
+                  Grid.Column="1"
+                  Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding UID}"/>
+                <DataGridTextColumn Binding="{Binding UName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="All groups from user #1" Grid.Row="2" Grid.Column="1" FontSize="15"/>
+        <DataGrid ItemsSource="{Binding groupNameList, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, NotifyOnSourceUpdated=True}" 
+                  AutoGenerateColumns="False" 
+                  SelectionMode="Single"
+                  Grid.Column="1"
+                  Grid.Row="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding }"/>
+            </DataGrid.Columns>
+        </DataGrid>
+               
   
     
     </Grid>
