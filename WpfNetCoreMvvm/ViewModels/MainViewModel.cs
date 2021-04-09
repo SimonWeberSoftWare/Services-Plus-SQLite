@@ -20,7 +20,7 @@ namespace WpfNetCoreMvvm.ViewModels
       
        
 
-        public MainViewModel(IOptions<AppSettings> options, IUsers users, IGroupsService groupsService)
+        public MainViewModel(IUsers users, IGroupsService groupsService)
         {        
             
 
@@ -71,10 +71,22 @@ namespace WpfNetCoreMvvm.ViewModels
            _ => true
            );
 
+        public void create(string username, int id)
+        {
+            users.createUser(id, username);     //Create
+   
+        }
+        public void delete(int id)
+        {
+            users.deleteUser(id);               //Delete
 
-        
+        }
 
-      
+        public  MainViewModel GetMainViewModel()
+        {
+            return this;
+        }
+
 
 
     }
