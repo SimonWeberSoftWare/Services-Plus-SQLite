@@ -58,8 +58,8 @@ namespace WpfNetCoreMvvm.ViewModels
         public List<int> userIDList { get; set; } = new List<int>();
         public List<string> userNameList { get; set; } = new List<string>();
         public List<Models.User> UserOfGroupList { get; set; } = new List<User>();
-       
-        
+
+     
 
 
         public RelayCommand<string> OperatorCMD => new(
