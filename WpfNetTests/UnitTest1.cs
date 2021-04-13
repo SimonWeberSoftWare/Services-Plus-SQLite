@@ -9,8 +9,7 @@ namespace WpfNetTests
 {
     public class UnitTest1
     {
-        private readonly IUsers users;
-        private readonly IGroupsService groupsService;
+      
 
         [Fact]
         public void ShouldCreateAndDeleteUser()
@@ -18,7 +17,7 @@ namespace WpfNetTests
             Boolean added = false;
             Boolean deleted = true;
 
-            MainViewModel testMainViewModel = new MainViewModel(users,groupsService);
+            MainViewModel testMainViewModel = MainViewModel.GetMainViewModel();
 
            // var testMainViewModel = GetMainViewModel();
 

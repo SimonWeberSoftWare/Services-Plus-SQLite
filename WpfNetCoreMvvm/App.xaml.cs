@@ -41,8 +41,8 @@ namespace WpfNetCoreMvvm
         {
             services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
             services.AddScoped<ISampleService, SampleService>();
-            services.AddScoped<IGroupsService, GroupsService>();
 
+            services.AddScoped<IGroupsService, GroupsService>();        //Services registrieren
             services.AddScoped<IUsers, Services.Users>();
 
             // Register all ViewModels.
