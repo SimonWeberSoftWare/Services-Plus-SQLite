@@ -11,7 +11,7 @@ namespace WpfNetTests
     {
       
 
-        [Fact]
+      /*  [Fact]
         public void ShouldCreateAndDeleteUser()
         {
             Boolean added = false;
@@ -42,12 +42,12 @@ namespace WpfNetTests
 
             Assert.True(added & deleted);
 
-        }
+        }*/
 
         [Fact]
         public void test()
         {
-
+            Assert.Equal(2 + 2, MainViewModel.addition(2, 2));
         }
 
 

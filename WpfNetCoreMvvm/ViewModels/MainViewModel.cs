@@ -10,10 +10,11 @@ using System.Windows;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
 using System.Data.SQLite;
 using System.Collections.Generic;
+using Xunit;
 
 namespace WpfNetCoreMvvm.ViewModels
 {
-    public class MainViewModel : Microsoft.Toolkit.Mvvm.ComponentModel.ObservableObject, INotifyPropertyChanged
+    public class MainViewModel : Microsoft.Toolkit.Mvvm.ComponentModel.ObservableObject
     {
         private readonly IUsers users;
         private readonly IGroupsService groupsService;
@@ -81,10 +82,10 @@ namespace WpfNetCoreMvvm.ViewModels
             users.deleteUser(id);               //Delete
 
         }
-
-        public  MainViewModel GetMainViewModel()
+   
+        public static int addition(int a, int b)
         {
-            return this;
+            return a + b;
         }
 
 
