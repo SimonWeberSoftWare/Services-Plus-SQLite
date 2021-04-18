@@ -4,6 +4,7 @@ using WpfNetCoreMvvm.Services;
 using WpfNetCoreMvvm.ViewModels;
 using System.Collections.Generic;
 using WpfNetCoreMvvm.Models;
+using Moq;
 
 namespace WpfNetTests
 {
@@ -49,7 +50,8 @@ namespace WpfNetTests
         {
             Assert.Equal(2 + 2, MainViewModel.addition(2, 2));
         }
-
+        [Fact]
+       
 
     }
     
